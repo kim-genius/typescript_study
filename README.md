@@ -1,5 +1,5 @@
 # typescript study
-
+- 내용정리 : https://sparkling-dust-aaa.notion.site/TypeScript-478ebb1a8f984e76b1b13c4765cc44bc
 ## Typescript 설치 셋팅
 ### 이미 있는 React 프로젝트에 설치할 때
     
