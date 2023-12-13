@@ -28,6 +28,7 @@ function App() {
   console.log(arr(['1', '2', 3, 4]))
 
 
+
   /** (숙제2) 다음과 같은 함수를 만들어보십시오.
   let 철수쌤 = { subject : 'math' }
   let 영희쌤 = { subject : ['science', 'english'] }
@@ -207,6 +208,60 @@ let 숙제3함수 = (a:string,b:(x:string)=>string,c:(x:string)=>number)=>{
 
 }
 숙제3함수('010-1111-2222', cutZero, removeDash)
+
+
+
+/**
+interface
+(숙제1) interface 이용해서 간단하게 타입을 만들어봅시다 
+ */
+let 상품:ProductInterface = { brand : 'Samsung', serialNumber : 1360, model : ['TV', 'phone'] }
+interface ProductInterface {
+  brand:string,
+  serialNumber:number,
+  model:string[]
+}
+
+/**
+(숙제2) array 안에 object 여러개가 필요합니다.
+ */
+let 장바구니:MarketInterface[] = [ { product : '청소기', price : 7000 }, { product : '삼다수', price : 800 } ]
+interface MarketInterface {product:string;price:number}
+/**
+(숙제3) 위에서 만든 타입을 extends 해봅시다.
+갑자기 서비스가 업데이트되어서 일부 상품은 card 속성이 들어가야합니다. 
+{ product : '청소기', price : 7000, card : false }
+위에서 만든 interface를 extends 해서 이 object의 타입을 만들어보십시오.
+ */
+interface add extends MarketInterface{
+  card:boolean
+}
+
+/**
+(숙제4) object 안에 함수를 2개 넣고 싶은데요 
+
+1. 이 object 자료는 plus() 함수를 내부에 가지고 있으며 plus 함수는 파라미터 2개를 입력하면 더해서 return 해줍니다. 
+
+2. 이 object 자료는 minus() 함수를 내부에 가지고 있으며 minus 함수는 파라미터 2개를 입력하면 빼서 return 해줍니다. 
+
+이 object 자료를 어떻게 만들면 될까요? 
+
+interface를 이용해서 object에 타입지정도 해보십시오. 
+ */
+
+interface MathObj {
+  plus:(a:number,b:number) => number,
+  minus:(a:number,b:number) => number
+}
+
+let Obj:MathObj = {
+  plus(a,b){
+    return a+b
+  },
+  minus(a,b){
+    return a-b
+  }
+}
 
   return (
     <div>
