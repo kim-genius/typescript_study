@@ -283,7 +283,7 @@ function 최댓값(...x : number[]) {
   })
   return result;
 }
-console.log(최댓값(4,6,3,2)) 
+
 
   return (
     <div>
