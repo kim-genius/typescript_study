@@ -264,7 +264,7 @@ let Obj:MathObj = {
 }
 
 
-/** Destructiong
+/** Destructiong 추가
 (숙제1) 숫자 여러개를 입력하면 최댓값을 return 해주는 함수를 만들어봅시다. 
 
 최댓값(6,3,7,2) 이렇게 쓰면 7이 return 되어야합니다. 
